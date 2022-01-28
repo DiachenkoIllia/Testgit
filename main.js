@@ -76,7 +76,87 @@
   console.log(t, String.fromCharCode(72, 101, 108, 108, 111)); //  js Hello
 
 // https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
-  const  str = 'what can cedefi bring to the crypton industry';
-  console.log(str.toUpperCase());
-  
+  //const  str = 'what can cedefi bring to the crypton industry';
+  // let string = 'what can cedefi bring to the crypto industry';
+  // console.log(string.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' '));
+
+  // var sentence = "what-can-cedefi-bring-to-the-crypto-industry";
+  // var newSen = sentence.match(/[^_\W]+/g).join(' ');
+  // console.log(newSen);
+
+  // const url = new URL('https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/')
+  // url.pathname // '/path/index.html'
+  // console.log(url);
+   var pathname = "/what-can-cedefi-bring-to-the-crypto-industry/"
+   function capitalize(pathname) {
+    return pathname.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+   }
+   console.log(capitalize(pathname));
+
+
+
+
+
+// Number 
+  // Метод toString() возвращает число в виде строки.
+    let ax = 123;
+    ax.toString();          // возвращает 123 из переменной x
+    (123).toString();      // возвращает 123 из литерала 123
+    (100 + 23).toString(); // возвращает 123 из выражения 100 + 23
+  // Метод toExponential() возвращает строку с округленным числом и записанным с использованием экспоненциальной записи .
+    let bx = 9.656;
+    bx.toExponential(2);    // возвращает 9.66e+0
+    bx.toExponential(4);    // возвращает 9.6560e+0
+    bx.toExponential(6);    // возвращает 9.656000e+0
+  // Метод toFixed() возвращает строку с числом, записанным с указанным количеством десятичных знаков:
+    let cx = 9.656;
+    cx.toFixed(0);          // возвращает 10
+    cx.toFixed(2);          // возвращает 9.66
+    cx.toFixed(4);          // возвращает 9.6560
+    cx.toFixed(6);          // возвращает 9.656000
+  // Метод toPrecision() возвращает строку с числом, записанным с указанной длиной:
+    let dx = 9.656;
+    dx.toPrecision();       // возвращает 9.656
+    dx.toPrecision(2);      // возвращает 9.7
+    dx.toPrecision(4);      // возвращает 9.656
+    dx.toPrecision(6);      // возвращает 9.65600
+  // Метод valueOf() возвращает число как число.
+    let fx = 123;
+    fx.valueOf();           // возвращает 123 из переменной x
+    (123).valueOf();       // возвращает 123 из литерала 123
+    (100 + 23).valueOf();  // возвращает 123 из выражения 100 + 23
+  // Метод Number() может использоваться для преобразования переменных JavaScript в числа:
+    Number(true);          // возвращает 1
+    Number(false);         // возвращает 0
+    Number("10");          // возвращает 10
+    Number("  10");        // возвращает 10
+    Number("10  ");        // возвращает 10
+    Number(" 10  ");       // возвращает 10
+    Number("10.33");       // возвращает 10.33
+    Number("10,33");       // возвращает NaN
+    Number("10 33");       // возвращает NaN
+    Number("John");        // возвращает NaN
+  // Метод Number() также может преобразовать дату в число:
+    Number(new Date("2017-09-30")); // возвращает 1506729600000
+  // Метод parseInt() анализирует строку и возвращает целое число. Разрешены пробелы. Возвращается только первое число:
+    parseInt("-10");        // возвращает -10
+    parseInt("-10.33");     // возвращает -10
+    parseInt("10");         // возвращает 10
+    parseInt("10.33");      // возвращает 10
+    parseInt("10 20 30");   // возвращает 10
+    parseInt("10 years");   // возвращает 10
+    parseInt("years 10");   // возвращает NaN
+  // Метод parseFloat() анализирует строку и возвращает число. Разрешены пробелы. Возвращается только первое число:
+    parseFloat("10");       // возвращает 10
+    parseFloat("10.33");    // возвращает 10.33
+    parseFloat("10 20 30"); // возвращает 10
+    parseFloat("10 years"); // возвращает 10
+    parseFloat("years 10"); // возвращает NaN
+  // Свойство MAX_VALUE возвращает максимально возможное число в JavaScript.
+    let gx = Number.MAX_VALUE;
+    console.log(gx); // 1.7976931348623157e+308
+  // Свойство MIN_VALUE возвращает наименьшее возможное число в JavaScript.
+    let hx = Number.MIN_VALUE;
+    console.log(hx); // 5e-324
+    
   
