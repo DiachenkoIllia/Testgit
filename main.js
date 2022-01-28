@@ -74,4 +74,9 @@
 // fromCharCode - Преобразует числовые значения Юникода в читаемые символы.
   const t = ' js'
   console.log(t, String.fromCharCode(72, 101, 108, 108, 111)); //  js Hello
+
+// https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
+  const  str = 'what can cedefi bring to the crypton industry';
+  console.log(str.toUpperCase());
+  
   
