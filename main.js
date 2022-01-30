@@ -83,10 +83,10 @@
   var sentence = arr[3]; //what-can-cedefi-bring-to-the-crypto-industry
   var splitted = sentence.replaceAll('-', ' '); // what can cedefi bring to the crypto industry
   var result = splitted.split(' ').map(word => word[0].toUpperCase() + word.substring(1)).join(' '); // What Can Cedefi Bring To The Crypto Industry
-  console.log(domain);
-  console.log(sentence);
-  console.log(splitted);
-  console.log(result);
+    console.log(domain);
+    console.log(sentence);
+    console.log(splitted);
+    console.log(result);
    
 
 
@@ -153,5 +153,51 @@
   // Свойство MIN_VALUE возвращает наименьшее возможное число в JavaScript.
     let hx = Number.MIN_VALUE;
     console.log(hx); // 5e-324
-    
+  // Метод Math.asin() возвращает арксинус числа (в радианах)
+    Math.asin(-2);  // NaN
+    Math.asin(-1);  // -1.5707963267948966 (-pi/2)
+    Math.asin(0);   // 0
+    Math.asin(0.5); // 0.5235987755982989
+    Math.asin(1);   // 1.570796326794897 (pi/2)
+    Math.asin(2);   // NaN
+  // Метод Math.abs() возвращает абсолютное значение числа.
+    Math.abs('-1');     // 1
+    Math.abs(-2);       // 2
+    Math.abs(null);     // 0
+    Math.abs('');       // 0
+    Math.abs([]);       // 0
+    Math.abs([2]);      // 2
+    Math.abs([1,2]);    // NaN
+    Math.abs({});       // NaN
+    Math.abs('string'); // NaN
+    Math.abs();         // NaN
+  // Метод Math.acos() возвращает арккосинус числа (в радианах)
+    Math.acos(-2);  // NaN
+    Math.acos(-1);  // 3.141592653589793
+    Math.acos(0);   // 1.5707963267948966
+    Math.acos(0.5); // 1.0471975511965979
+    Math.acos(1);   // 0
+    Math.acos(2);   // NaN
+  // Метод Math.atan() возвращает арктангенс числа (в радианах)
+    Math.atan(1);  // 0.7853981633974483
+    Math.atan(0);  // 0
+  // Метод Math.atan2() возвращает арктангенс от частного своих аргументов.
+    Math.atan2(90, 15); // 1.4056476493802699
+    Math.atan2(15, 90); // 0.16514867741462683
+  // Метод Math.ceil() - округление вверх. Округляет аргумент до ближайшего большего целого.
+    Math.ceil(.95);    // 1
+    Math.ceil(4);      // 4
+    Math.ceil(7.004);  // 8
+    Math.ceil(-0.95);  // -0
+    Math.ceil(-4);     // -4
+    Math.ceil(-7.004); // -7
+  // Метод Math.max() возвращает наибольшее из нуля или более чисел.
+    Math.max(10, 20);   //  20
+    Math.max(-10, -20); // -10
+    Math.max(-10, 20);  //  20
+  // Метод Math.min() возвращает наименьшее из нуля или более чисел.
+    var xxxx = 10, y = -20;
+    var zzzz = Math.min(xxxx, zzzz);
+
+            
   
