@@ -75,24 +75,19 @@
   const t = ' js'
   console.log(t, String.fromCharCode(72, 101, 108, 108, 111)); //  js Hello
 
-// https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
-  //const  str = 'what can cedefi bring to the crypton industry';
-  // let string = 'what can cedefi bring to the crypto industry';
-  // console.log(string.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' '));
 
-  // var sentence = "what-can-cedefi-bring-to-the-crypto-industry";
-  // var newSen = sentence.match(/[^_\W]+/g).join(' ');
-  // console.log(newSen);
-
-  // const url = new URL('https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/')
-  // url.pathname // '/path/index.html'
-  // console.log(url);
-   var pathname = "/what-can-cedefi-bring-to-the-crypto-industry/"
-   function capitalize(pathname) {
-    return pathname.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
-   }
-   console.log(capitalize(pathname));
-
+//  https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
+  var str = 'https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/';
+  var arr = str.split('/');
+  var domain = str.split('/')[2]; // inc4.net
+  var sentence = arr[3]; //what-can-cedefi-bring-to-the-crypto-industry
+  var splitted = sentence.replaceAll('-', ' '); // what can cedefi bring to the crypto industry
+  var result = splitted.split(' ').map(word => word[0].toUpperCase() + word.substring(1)).join(' '); // What Can Cedefi Bring To The Crypto Industry
+  console.log(domain);
+  console.log(sentence);
+  console.log(splitted);
+  console.log(result);
+   
 
 
 
