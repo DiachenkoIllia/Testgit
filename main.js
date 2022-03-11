@@ -1,18 +1,66 @@
-var s = window.screen;  //Переменная для выясняющая размер вашего экрана 
-var width = q.width = s.width;
-var height = q.height = s.height;
-var letters = Array(256).join(1).split('');
+// Термины: Рекурсия – это термин в программировании, означающий вызов функцией самой себя. 
+// Рекурсивные функции могут быть использованы для элегантного решения определённых задач. 
+// Когда функция вызывает саму себя, это называется шагом рекурсии.
 
-var draw = function () {
-  q.getContext('2d').fillStyle='rgba(0,0,0,.05)'; //Тут цвет фона
-  q.getContext('2d').fillRect(0,0,width,height);
-  q.getContext('2d').fillStyle='#0F0'; //Тут цвет букв
-  letters.map(function(y_pos, index){
-  text = String.fromCharCode(65+Math.random()*33);
-  x_pos = index * 10;
-  q.getContext('2d').fillText(text, x_pos, y_pos);
-  letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
-  });
-};
-setInterval(draw, 33);
+// Пример рекурсии 
+let t = 0;
+function f1() {
+  t++;
+  console.log(t);
+  if (t === 100) return;
+  f1();
+}
+// f1();
 
+// цикл 
+function f2(){
+  let out = '';
+  for (let i = 1; i <=30; i++){
+    out += i + ' ';
+  }
+  console.log(out);
+}
+
+// f2();
+// рекурсией
+let i = 0;
+let out ='';
+function f3() {
+  i++;
+  out += i + ' ';
+  if( i > 30) return;
+  f3();
+}
+// f3();
+// console.log(out);
+
+// лицо с низкой социальной ответсвтенностью...
+function randomInteger(min, max) {
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
+let s1 = 0;
+function moneyRecursion(){
+  let m = randomInteger(0, 100);
+  console.log('add' + m);
+  s1 += m;
+  console.log('sum: ' + s1);
+  if (s1 >= 300) return;
+  moneyRecursion(); 
+}
+
+// moneyRecursion();
+
+function moneyCycle(){
+  let s2 = 0;
+  for(let i = 0; true; i++){
+    let m = randomInteger(0, 100);
+    console.log('add: ' + m);
+    s2 += m;
+    console.log('sum; ' + s2);
+    if (s2 >= 300) return;
+  }
+}
+// moneyCycle();
