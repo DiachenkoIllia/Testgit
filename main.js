@@ -71,5 +71,16 @@ for(let i = 10; i >= 5; i--){
   console.log(i)
 }
 let b = 0;
+b = b + 1;
 
 // console.log(s);
+
+// function test  
+function test(name){
+  console.log('Hello -', name);
+}
+test('Ilia');
+
+// function arrow
+let test2 = name2 => console.log('Hello -', name2);
+ test2('Ania');
