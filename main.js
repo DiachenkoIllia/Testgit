@@ -16,6 +16,7 @@ function f1() {
 function f2(){
   let out = '';
   for (let i = 1; i <=30; i++){
+
     out += i + ' ';
   }
   console.log(out);
@@ -63,4 +64,12 @@ function moneyCycle(){
     if (s2 >= 300) return;
   }
 }
-// moneyCycle();
+  // moneyCycle();
+
+let s = 228;
+for(let i = 10; i >= 5; i--){
+  console.log(i)
+}
+let b = 0;
+
+// console.log(s);
