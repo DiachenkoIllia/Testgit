@@ -137,7 +137,7 @@ const lastCar = cars.pop()
 // console.log(upperCaseFruit);
 // console.log(fruit); 
 // ----------------------------------------------------------------
-
+/*
 const people = [
     {name: 'Ania', budget: 4500},
     {name: "Ilia", budget: 5000},
@@ -150,4 +150,23 @@ const allBudget = people
   accum += person.budget
   return accum
 }, 0)
-console.log(allBudget);
+console.log(allBudget);*/
+
+// Test new Object   
+let apple = new Object ();
+apple.color = 'green';
+apple.shape = 'round';
+
+apple.describe = function () {
+  return 'An apple is ' + this.color;
+}
+console.log (apple.describe ()); // An apple is green
+
+function Fruit (color, shape) {
+  this.color = color;
+  this.shape = shape;
+}
+  let apple2 = new Fruit ('yellow', 'round');
+  let apple3 = new Fruit ('red', 'round');
+
+  console.log (apple, apple2, apple3);

@@ -3,10 +3,36 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <body>    
-            <h1>Hello World</h1> 
-            <canvas id="q"></canvas>
-            <script src="main.js">
+        <body>
+            <script src="main.js"></script>    
+            <p id="text">Learn Java Script</p>
+            <button onclick = "changeColor('blue');">Синий</button>
+            <button onclick = "changeColor('red');">Красный</button>
+            <button onmouseover = "changeColor('green');">Зеленый</button>
+            <br>
+            <form name = 'myForm' action ="" onsubmit ="validateForm()" method="post">
+                Name: <input type="text" name="fname">
+                Number: <input type="text" name="ftel">
+                <input type="Submit" value="Submit">
+            </form>
+            <script>
+                function validateForm () {
+                    let element = document.forms['myForm']['fname'].value;
+                    let tel = document.forms['myForm']['ftel'].value;
+                    if (element == '') {
+                        alert ('Enter your Name');
+                        return false;
+                    } else if (tel == '') {
+                        alert ('Enter your Number');
+                        return false;
+                    }
+                }
+            </script>
+            <script>
+                function changeColor (newColor) {
+                    let element = document.getElementById('text');
+                    element.style.color = newColor;
+                }
             </script>
         </body>
     </head>
